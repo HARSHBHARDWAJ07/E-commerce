@@ -1,0 +1,106 @@
+:root {
+    --primary-color: #133435;
+    --header-font-size: 50px;
+    --header-font-weight: 600;
+    --hr-width: 200px;
+    --hr-height: 6px;
+    --hr-radius: 10px;
+    --gap-large: 30px;
+    --gap-medium: 20px;
+    --gap-small: 15px;
+    --gap-xs: 10px;
+}
+
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xs);
+    height: 90vh;
+    margin-bottom: 100px;
+}
+
+.new-collections h1 {
+    color: var(--primary-color);
+    font-size: var(--header-font-size);
+    font-weight: var(--header-font-weight);
+}
+
+.new-collections hr {
+    width: var(--hr-width);
+    height: var(--hr-height);
+    border-radius: var(--hr-radius);
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: var(--gap-large);
+    gap: var(--gap-large);
+}
+
+@media (max-width: 1280px) {
+    .new-collections {
+        height: 70vh;
+    }
+    .new-collections h1 {
+        font-size: 40px;
+    }
+    .new-collections hr {
+        width: 160px;
+        height: 4px;
+    }
+    .collections {
+        gap: var(--gap-medium);
+        margin-top: var(--gap-medium);
+    }
+}
+
+@media (max-width: 1024px) {
+    .new-collections h1 {
+        font-size: 30px;
+    }
+    .new-collections hr {
+        width: 120px;
+        height: 3px;
+    }
+    .collections {
+        gap: var(--gap-small);
+        margin-top: var(--gap-small);
+    }
+}
+
+@media (max-width: 800px) {
+    .new-collections {
+        gap: 6px;
+    }
+    .new-collections h1 {
+        font-size: 20px;
+    }
+    .new-collections hr {
+        width: 100px;
+    }
+    .collections {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    .collections {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--gap-medium);
+    }
+}
+
+@media (max-width: 400px) {
+    .new-collections h1 {
+        font-size: 18px;
+    }
+    .new-collections hr {
+        width: 80px;
+        height: 2px;
+    }
+    .collections {
+        gap: 5px;
+    }
+}
